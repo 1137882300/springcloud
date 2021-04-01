@@ -1,0 +1,26 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zull
+
+eureka:
+  client:
+    service-url: # 集群
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: zuul9527.com
+    prefer-ip-address: true
+
+
+info:
+  app.name: zhong-springcloud
+  company.name: xiaomai.com
+
+zuul:
+  routes: # http://www.zhong.com:9527/mydept/dept/get/5
+    mydept.serviceId: springcloud-provider-dept
+    mydept.path: /mydept/**
+  ignored-services: "*"  # 不能再使用这个路径再访问了,隐藏全部
+  prefix: /zhong  # 设置公共的访问前缀

@@ -80,10 +80,17 @@
             <version>1.4.6.RELEASE</version>
         </dependency>
 
-        <!--完善监控信息的-->
+        <!--完善 监控 信息的-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--hystrix-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <version>1.4.6.RELEASE</version>
         </dependency>
 
     </dependencies>

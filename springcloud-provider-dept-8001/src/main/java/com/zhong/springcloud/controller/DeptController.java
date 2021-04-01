@@ -35,7 +35,11 @@ public class DeptController {//http://localhost:8001/dept/list
 
     @GetMapping("/dept/get/{id}")
     public Dept getDept(@PathVariable("id") Long id){
-        return deptService.findById(id);
+        Dept dept = deptService.findById(id);
+        if (dept == null){
+            throw new RuntimeException("fail");
+        }
+        return dept;
     }
 
     @GetMapping("/dept/list")
