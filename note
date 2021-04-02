@@ -2,4 +2,67 @@
 2.编写配置文件
 3.开启功能
 4.配置类
-                7开始
+
+git add .
+git commit -m ''
+git push origin company
+
+
+服务熔断：服务端 ，某个服务超时或者异常，引起服务熔断，（保险丝）
+
+服务降级：客户端，从整体的网站请求负载考虑，当某个服务熔断或者关闭之后，服务将不再调用
+        此时，在客户端，我们可以准备一个FallbackFactory，返回一个默认的值（缺省值），整体的服务水平就下降了，但是好歹能用（请求还是正常的）
+
+
+ config
+
+
+ # 列出所有本地分支
+ $ git branch
+
+ # 列出所有远程分支
+ $ git branch -r
+
+ # 新建一个分支，但依然停留在当前分支
+ $ git branch [branch-name]
+
+ # 新建一个分支，并切换到该分支
+ $ git checkout -b [branch]
+
+# 切换到指定分支，并更新工作区
+$ git checkout [branch-name]
+
+ # 切换到上一个分支
+ $ git checkout -
+
+# 合并指定分支到当前分支
+$ git merge [branch]
+
+# 删除分支
+$ git branch -d [branch-name]
+
+查看信息
+# 显示有变更的文件
+$ git status
+
+# 显示当前分支的版本历史
+$ git log
+
+# 显示所有远程仓库
+$ git remote -v
+
+# 取回远程仓库的变化，并与本地分支合并
+$ git pull [remote] [branch]
+
+# 上传本地指定分支到远程仓库
+$ git push [remote] [branch]
+
+# 强行推送当前分支到远程仓库，即使有冲突
+$ git push [remote] --force
+
+# 推送所有分支到远程仓库
+$ git push [remote] --all
+
+
+
+
