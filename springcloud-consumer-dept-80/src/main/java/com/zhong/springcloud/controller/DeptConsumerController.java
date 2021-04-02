@@ -26,8 +26,6 @@ public class DeptConsumerController {
 //    private static final String REST_URL_PREFIX = "http://localhost:8001";
     private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIDER-DEPT";//通过微服务名称去访问的
 
-
-
     @RequestMapping("/consumer/dept/add")
     public boolean add(Dept dept){
         return restTemplate.postForObject(REST_URL_PREFIX+"/dept/add",dept,Boolean.class);
